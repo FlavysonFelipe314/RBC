@@ -3,7 +3,7 @@ const path = require('path');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   distDir: process.env.NEXT_DIST_DIR || '.next',
-  output: process.env.NEXT_OUTPUT_MODE,
+  output: 'export', // Static export para hospedagem compartilhada
   experimental: {
     outputFileTracingRoot: path.join(__dirname, '../'),
   },
@@ -13,7 +13,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
-  images: { unoptimized: true },
+  images: { 
+    unoptimized: true, // Necessário para static export
+  },
+  // Desabilitar recursos que não funcionam com static export
+  trailingSlash: true, // Adiciona barra no final das URLs
 };
 
 module.exports = nextConfig;

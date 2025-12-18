@@ -4,8 +4,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:export": "next build",
+    "prepare:deploy": "node scripts/prepare-deploy.js",
+    "deploy": "yarn build && yarn prepare:deploy",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:push": "prisma db push"
   },
   "prisma": {
     "seed": "tsx --require dotenv/config scripts/seed.ts"

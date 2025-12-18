@@ -1,4 +1,4 @@
-import { prisma } from './lib/prisma';
+import { prisma } from '../lib/db';
 
 async function testAPI() {
   try {
@@ -21,3 +21,4 @@ async function testAPI() {
 }
 
 testAPI();
+

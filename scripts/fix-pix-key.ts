@@ -1,4 +1,4 @@
-import { prisma } from './lib/prisma';
+import { prisma } from '../lib/db';
 
 async function fixPixKey() {
   try {
@@ -35,3 +35,4 @@ async function fixPixKey() {
 }
 
 fixPixKey();
+

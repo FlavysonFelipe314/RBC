@@ -37,6 +37,10 @@
     ".build/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "fix-efi-credentials.ts",
+    "fix-pix-key.ts",
+    "test-api-route.ts",
+    "scripts/**/*"
   ]
 }
