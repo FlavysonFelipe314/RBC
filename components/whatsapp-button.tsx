@@ -15,7 +15,8 @@ export default function WhatsAppButton({
   className = "" 
 }: WhatsAppButtonProps) {
   const whatsappNumber = "5521986188209";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}`;
+  const message = 'Olá, vim pelo site e gostaria de solicitar um orçamento.';
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   const sizeClasses = {
     sm: "px-4 py-2 text-sm",

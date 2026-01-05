@@ -8,7 +8,7 @@ export function FloatingWhatsApp() {
   const [isVisible, setIsVisible] = useState(false);
   const [showTooltip, setShowTooltip] = useState(true);
   const whatsappNumber = '5521986188209';
-  const message = 'Olá! Gostaria de solicitar um orçamento.';
+  const message = 'Olá, vim pelo site e gostaria de solicitar um orçamento.';
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   useEffect(() => {
